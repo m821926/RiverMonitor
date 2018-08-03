@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <TextView
+        android:id="@+id/Date_entrylistview"
+        android:layout_width="130dip"
+        android:layout_height="wrap_content"
+        android:textSize="12dip"
+        />
+    <TextView
+        android:id="@+id/Distance_entrylistview"
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Date_entrylistview"
+        android:layout_marginLeft="1dip"
+        android:textAlignment="center"
+        android:textSize="12dip"
+        />
+    <TextView
+        android:id="@+id/temperature_entrylistview"
+        android:layout_width="80dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Distance_entrylistview"
+        android:layout_marginLeft="1dip"
+        android:textAlignment="center"
+        android:textSize="12dip" />
+    <TextView
+        android:id="@+id/Humidity_entrylistview"
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/temperature_entrylistview"
+        android:layout_marginLeft="1dip"
+        android:textAlignment="center"
+        android:textSize="12dip" />
+
+</RelativeLayout>

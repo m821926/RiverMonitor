@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.pj.rivermonitor.MainActivity"
+    android:id="@+id/portraitRelativeLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Last Reading"
+        android:id="@+id/lblLastReading"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ID:"
+        android:id="@+id/lblID"
+        android:layout_below="@+id/lblLastReading"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp"
+        android:layout_alignEnd="@+id/lblTemperature" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Terminal:"
+        android:id="@+id/lblTerminal"
+        android:layout_below="@+id/tbID"
+        android:layout_marginTop="26dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/lblTemperature" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbID"
+        android:text="ID"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="left"
+        android:layout_alignBaseline="@id/lblID"
+        android:layout_toEndOf="@+id/btnUpdate" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbTerminal"
+        android:text="Terminal"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="left"
+        android:layout_alignBaseline="@id/lblTerminal"
+        android:layout_toEndOf="@+id/btnUpdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Date:"
+        android:id="@+id/lblDate"
+        android:layout_alignBaseline="@+id/tbDate"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbDate"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="left"
+
+        android:layout_below="@+id/tbTerminal"
+        android:layout_alignLeft="@+id/tbTerminal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Distance:"
+        android:id="@+id/lblDistance"
+        android:layout_alignBaseline="@+id/tbDistance"
+
+        android:layout_alignEnd="@+id/lblHumidity"
+
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbDistance"
+        android:text="distance"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="left"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/tbDate"
+        android:layout_alignLeft="@+id/tbDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Temperature:"
+        android:id="@+id/lblTemperature"
+        android:layout_alignBaseline="@+id/tbTemperature"
+        android:layout_alignParentStart="true"
+    />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbTemperature"
+        android:text="Temperature"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_gravity="left"
+        android:layout_alignLeft="@id/tbDistance"
+        android:layout_below="@+id/tbDistance" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Humidity:"
+        android:id="@+id/lblHumidity"
+        android:layout_alignBaseline="@+id/tbHumidity"
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbHumidity"
+        android:text="Humidity"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignLeft="@id/tbTemperature"
+        android:layout_below="@id/tbTemperature"
+        android:layout_gravity="left" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Last Reading"
+        android:id="@+id/btnUpdate"
+        android:layout_below="@+id/btnShowSensorPreviousValue"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last 20 Readings"
+        android:id="@+id/btnLast10Readings"
+        android:layout_alignBaseline="@id/btnUpdate"
+        android:layout_toRightOf="@id/btnUpdate"
+         />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinSensorFilter"
+        android:spinnerMode="dropdown"
+        android:contextClickable="true"
+        android:layout_toRightOf="@+id/btnShowSensor"
+        android:layout_alignBaseline="@id/btnShowSensor"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Show Sensor:"
+        android:id="@+id/btnShowSensor"
+        android:layout_below="@id/lblHumidity"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;"
+        android:id="@+id/btnShowSensorPreviousValue"
+        android:layout_below="@id/btnShowSensor"
+        android:layout_alignEnd="@+id/lblDate" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&gt;"
+        android:id="@+id/btnShowSensorNextValue"
+        android:layout_toRightOf="@id/btnShowSensorPreviousValue"
+        android:layout_alignBaseline="@id/btnShowSensorPreviousValue"
+        android:layout_alignEnd="@+id/lblHumidity" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Graphical View"
+        android:id="@+id/btnSwitch2GraphicView"
+        android:layout_below="@+id/btnUpdate"
+        android:layout_alignEnd="@+id/btnUpdate"
+        android:layout_alignStart="@+id/lblDistance" />
+</RelativeLayout>
